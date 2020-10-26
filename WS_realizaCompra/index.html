@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Consultar prato</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div row="row">
+            <h3 style="text-align: center;">Selecione um prato para realizar a compra</h3>
+            <form action="ws_infoPrato_cli.php" method="POST">
+                <div class="form-group">
+                <label for="PratoID">Pesquise por id do prato:</label>
+                <input type="text" class="form-control" placeholder="Enter ID" id="PratoID" name="pratoID">
+                </div>
+                <button type="submit" class="btn btn-primary" value="consultar">Submit</button>
+            </form>
+        </div>    
+    </div>    
+</body>
+</html>

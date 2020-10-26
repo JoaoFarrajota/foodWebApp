@@ -1,0 +1,59 @@
+.tagsDaInfo{
+
+
+text-align: left;
+}
+
+.useravatar{
+
+	padding-top: 10px;
+}
+
+.titulos {
+	font-size: 60px;
+	color: #540d22;
+	font-weight: bold;
+}
+
+.nav_color {
+
+	background-color:	#dbe86d;
+	border: 5px black;
+	border-bottom-style: outset;
+}
+
+.fundo_cor {
+
+	background-color:	#f8bd90;
+}
+
+.font_nav {
+	font-size: 20px;
+	font-weight: bold;
+	margin-left: 30px;
+	color: #540d22;
+}
+
+.button_entrar {
+	background-color:  #dbe86d;
+	border: 2px outset black;
+	color: #540d22;
+}
+
+.button_entrar:hover{
+	background-color: #9fd0a3;
+}
+
+#masterContainer{
+	border: 10px outset #936039;
+	background-image: linear-gradient( #dbe86d, #9fd0a3);
+	color: #540d22;
+}
+
+.carrosel {
+	margin: auto;
+}
+
+.carousel-inner{
+	border: 4px solid  #540d22;
+}
