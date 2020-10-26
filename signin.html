@@ -1,0 +1,221 @@
+﻿<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Registo form</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link type="text/css" href="css/cssProject.css" rel="stylesheet">
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+  <script src="js/Date.js"></script>
+</head>
+
+<body class="fundo_cor">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg static-top nav_color">
+    <div class="container">
+      <a class="navbar-brand font_nav" href="index.html">MyFoodApp</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto navbar-right">
+          <li class="nav-item">
+            <a class="nav-link font_nav" href="#" data-toggle="modal" data-target="#modal_login1">Iniciar Sessão <span class="glyphicon glyphicon-log-in"></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link font_nav" href="#" data-toggle="modal" data-target="#modal_ajuda2">Ajuda <span class="glyphicon glyphicon-question-sign"></span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Modal para o login-->
+  <div id="modal_login1" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title">Iniciar Sessão</h3>
+        </div>
+        <div class="modal-body">
+          <form action="login.php" method="post">
+              <input name="email" type="text" class="form-control" id="email" placeholder="Username/Email" required><br>
+              <input name="pwd" type="password" class="form-control" id="pwd" placeholder="Password" required><br>
+              <button type="submit" class="btn btn-primary play">Enviar</button>
+          </form>
+         <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Modal para a ajuda-->
+  <div id="modal_ajuda2" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title">Criar Conta</h3>
+        </div>
+        <div class="modal-body">
+          <p>Faça o seu registo na nossa App para começar a pedir os seus pratos favoritos.</p>
+          <p>Poderá escolher entre Consumidor, Vendedor ou Ambos</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page Content -->
+  <div id="masterContainer" class="container">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h1 class="mt-5 titulos">Criar Conta</h1><br>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <!-- Default form register -->
+        <div class="col-md-4 col-md-offset-4 text-center">
+
+
+          <form action="register.php" method="post" enctype="multipart/form-data" class="">
+              <input type="text" class="form-control" name="nproprio" value="" placeholder="Nome Próprio" required><br>
+
+              <input type="text" class="form-control" name="apelido" value="" placeholder="Apelido" required><br>
+
+              <input type="email" class="form-control" name="email" value="" placeholder="Email" required><br>
+
+              <input type="text" class="form-control" name="nick" value="" placeholder="Nome de utilizador (nickname)" required><br>
+
+
+              <label>
+                <input type="radio" name="avatar" value="burgerking.jpg" checked>
+                <img src="profileImagem/burgerking.jpg" height="150" width="150" class="img-fluid" alt="Responsive image">
+              </label>
+
+              <label>
+                <input type="radio" name="avatar" value="chipotle.jpg" checked>
+                <img src="profileImagem/chipotle.jpg" height="150" width="150" class="img-fluid" alt="Responsive image" >
+              </label>
+
+              <label>
+                <input type="radio" name="avatar" value="Kfc.jpg" checked>
+                <img src="profileImagem/Kfc.jpg" height="150" width="150" class="img-fluid" alt="Responsive image">
+              </label>
+
+
+              <label>
+                <input type="radio" name="avatar" value="redLobster.png" checked>
+                <img src="profileImagem/redLobster.png" height="150" width="150" class="img-fluid" alt="Responsive image" >
+              </label>
+
+
+              <label>
+                <input type="radio" name="avatar" value="Ronald_Macdonald.jpg" checked>
+                <img src="profileImagem/Ronald_Macdonald.jpg" height="150" width="150" class="img-fluid" alt="Responsive image" >
+              </label>
+
+
+              <label>
+                <input type="radio" name="avatar" value="starbucks_mascot.jpg" checked>
+                <img src="profileImagem/starbucks_mascot.jpg" height="150" width="150" class="img-fluid" alt="Responsive image">
+              </label>
+
+
+              <label>
+                <input type="radio" name="avatar" value="Wendy_mascot.jpg" checked>
+                <img src="profileImagem/Wendy_mascot.jpg" height="150" width="150" class="img-fluid" alt="Responsive image" >
+              </label><br><br>
+
+
+              <!--<form action="upload.php" method="post" enctype="multipart/form-data">
+                Selecciona uma foto
+                <input type="file" name="fileToUpload" id="fileToUpload">
+                <input type="submit" name="submit" value="Upload Image">
+              </form>
+              <br> -->
+
+              <div class="form-check-inline">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" value="feminino" name="sexo">Feminino</label>
+              </div>
+
+              <div class="form-check-inline">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" value="masculino" name="sexo">Masculino</label>
+              </div>
+
+              <div class="form-check-inline disabled">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" value="naodiz" name="sexo">Prefiro não dizer</label>
+              </div><br><br>
+
+              <input id="dateInput" type="date" class="form-control datepicker" name="datadenascimento" value="" min="1903-01-02" max="2020-05-09" placeholder="Data de Nascimento"><br>
+
+              <input type="text" class="form-control" name="morada"size="40" value="" placeholder="Morada" required><br>
+
+              <input type="text" class="form-control" name="concelho" value="" placeholder="Concelho" required><br>
+
+              <input type="text" class="form-control" name="distrito" value="" placeholder="Distrito" required><br>
+
+              <input type="text" class="form-control" name="pais" value="" placeholder="País" required><br>
+
+
+              <div class="form-group">
+                <label>Pretende registar-me como (Pode selecionar as duas opções):</label>
+              </div>
+
+             <select onchange="showfield(this.options[this.selectedIndex].value)" name="tipo">
+                <option selected="selected">Por favor selecione uma opção</option>
+                <option value="vendedor" name="tipo">Vendedor</option>
+                <option value="consumidor" name="tipo">Consumidor</option>
+                <option value="ambos" name="tipo">Consumidor e Vendedor</option>
+              </select><br><br>
+
+              <div id="div1"></div>
+
+              <input type="password" name="passwd" class="form-control" value="" placeholder="Coloque a sua palavra passe" required><br>
+
+              <input type="password" name="rePasswd" class="form-control" value="" placeholder="Confira a sua palavra pass" required><br>
+
+              <button class="btn btn-primary btn-sm" name="submit" type="submit">Criar Conta</button>
+          </form>
+        </div>
+      </div>
+     </div>
+    </div>
+
+   <!-- Footer -->
+ 	<footer class="page-footer font-small blue">
+     <!-- Copyright -->
+     <div class="footer-copyright text-center py-3">
+      <h5>@ 2020 copyright: Aplicações e Serviços na Web | Grupo 014</h5>
+     </div>
+   </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.slim.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="js/projecto.js"></script>
+
+
+</body>
+
+</html>

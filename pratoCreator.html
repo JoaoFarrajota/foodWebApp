@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>prato creator form</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link type="text/css" href="css/cssProject.css" rel="stylesheet">
+</head>
+
+<body class="fundo_cor">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg static-top nav_color">
+    <div class="container">
+      <a class="navbar-brand font_nav" href="index.html">MyFoodApp</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto navbar-right">
+          <li class="nav-item">
+            <a class="nav-link font_nav" href="foodpage.php" > Pratos Disponíveis <span class="	glyphicon glyphicon-cutlery	"></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link font_nav" href="welcome.php" > Perfil <span class="glyphicon glyphicon-user"></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link font_nav" href="#" data-toggle="modal" data-target="#modal_ajuda2">Ajuda <span class="glyphicon glyphicon-question-sign"></span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Modal para o login-->
+  <div id="modal_login1" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title">Iniciar Sessão</h3>
+        </div>
+        <div class="modal-body">
+          <form action="login.php" method="post">
+              <input name="selected" type="text" class="form-control" id="email" placeholder="Username/Email" required><br>
+              <input name="pass" type="password" class="form-control" id="pwd" placeholder="Password" required><br>
+              <button type="submit" class="btn btn-primary play">Enviar</button>
+          </form>
+         <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Modal para a ajuda-->
+  <div id="modal_ajuda2" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title">Crie o seu prato</h3>
+        </div>
+        <div class="modal-body">
+          <p>Crie os seus próprios pratos com toda a informação detalhada</p>
+          <p>Não se escolha de deixar uma fotografia cheia de sabor! :)</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page Content -->
+  <div id="masterContainer" class="container">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h1 class="mt-5 titulos">Criar os seus pratos</h1><br>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <!-- Default form register -->
+        <div class="col-md-4 col-md-offset-4 text-center">
+
+
+          <form action="pratoCreator.php" method="post" enctype="multipart/form-data" class="">
+
+
+            <input type="text" class="form-control" name="nome" value="" placeholder="Nome do prato" required><br>
+
+            <input type="Number" step=0.01 min="0" class="form-control" name="preco" value="" placeholder="Preco do prato" required><br>
+
+            <input type="Number" min="0" class="form-control" name="Quantidade" value="" placeholder="Quantidade inicial do prato" required><br>
+
+
+              <h3>Por favor, selecione, pelo menos uma categoria.</h3>
+
+
+
+
+                <input type="checkbox" name="categoria[]" value="africana" id="1"> <label for="1">Comida Africana</label><br>
+                <input type="checkbox" name="categoria[]" value="Arabe" id="2"> <label for="2">Comida Arabe </label><br>
+                <input type="checkbox" name="categoria[]" value="asiatica" id="3"> <label for="3">Comida Asiatica </label><br>
+                <input type="checkbox" name="categoria[]" value="europeia" id="4"> <label for="4">Comida Europeia </label><br>
+                <input type="checkbox" name="categoria[]" value="Francesa" id="5"> <label for="5">Comida Francesa</label><br>
+                <input type="checkbox" name="categoria[]" value="Halal" id="6"> <label for="6"> Comida Halal </label><br>
+                <input type="checkbox" name="categoria[]" value="Indiana" id="7"> <label for="7"> Comida Indiana </label><br>
+                <input type="checkbox" name="categoria[]" value="Italiana" id="8"> <label for="8"> Comida Italiana </label><br>
+                <input type="checkbox" name="categoria[]" value="Japonesa" id="9"> <label for="9"> Comida Japonesa </label><br>
+                <input type="checkbox" name="categoria[]" value="latina" id="10"> <label for="10"> Comida Latina </label><br>
+                <input type="checkbox" name="categoria[]" value="Tailandesa" id="11"> <label for="11"> Comida Tailandesa </label><br>
+                <input type="checkbox" name="categoria[]" value="Vegan" id="12"> <label for="12"> Comida Vegan </label><br>
+
+
+              <h3>Por favor coloque aqui os diferentes ingredientes separados por vírgula e um espaço.</h3>
+              <textarea class="form-control" name="ingredient" value="">Ingrediente1, Ingrediente2, Ingrediente3</textarea>
+
+
+
+              Coloque a foto do prato
+              <input type="file" name="fileToUpload" id="fileToUpload">
+
+
+
+             <div>
+               <h3>Deseja que o prato fique logo disponivel para venda?</h3>
+
+               <div class="form-check-inline">
+                 <label class="form-check-label">
+                   <input type="radio" class="form-check-input" value="disponivel" name="active">Sim</label>
+               </div>
+
+               <div class="form-check-inline">
+                 <label class="form-check-label">
+                   <input type="radio" class="form-check-input" value="indisponivel" name="active">Não</label>
+               </div><br><br>
+
+             </div>
+
+
+            <button class="btn btn-primary btn-sm" name="submitPrato" type="submit">Criar Prato</button>
+            <input type="reset">
+
+
+          </form>
+        </div>
+      </div>
+     </div>
+    </div>
+
+   <!-- Footer -->
+ 	<footer class="page-footer font-small blue">
+     <!-- Copyright -->
+     <div class="footer-copyright text-center py-3">
+      <h5>@ 2020 copyright: Aplicações e Serviços na Web | Grupo 014</h5>
+     </div>
+   </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.slim.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="js/projecto.js"></script>
+
+
+</body>
+
+</html>
